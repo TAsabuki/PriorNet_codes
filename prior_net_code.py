@@ -108,7 +108,10 @@ I_syn_input = np.random.rand(n_input)
 I_syn = np.random.rand(N)
 id_rec = np.zeros(N, dtype=bool)
 
-pat_list = [0, 0, 1, 2, 3, 4]
+prob_ratio = 2  # the probability ratio
+
+n_pat = 5  # num of stim patterns
+pat_list = [0] * prob_ratio + list(range(1, n_pat))
 n_pat = len(set(pat_list))
 r_input = 0.05
 noise_rate = 0.2 * (r_input * 100) / n_input
